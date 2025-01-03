@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\ConvertCase;
 
-// just showing default laravel page 
-Route::view('/default', 'welcome');
+// just showing laravel page 
+Route::view('/welcome', 'welcome');
 
 // show main page here, using livewire ...
 Route::get('/', ConvertCase::class);

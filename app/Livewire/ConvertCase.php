@@ -1,3 +1,5 @@
+<?php
+
 namespace App\Livewire;
 
 use Livewire\Component;
@@ -7,6 +9,11 @@ class ConvertCase extends Component
     public $inputText = ''; // Text dari pengguna
     public $outputText = ''; // Hasil konversi
     public $caseType = 'sentence'; // Tipe konversi default
+    
+    public function render()
+    {
+        return view('livewire.convert-case');
+    }
 
     public function convert()
     {
@@ -57,10 +64,5 @@ class ConvertCase extends Component
             $result .= ctype_lower($char) ? strtoupper($char) : strtolower($char);
         }
         return $result;
-    }
-
-    public function render()
-    {
-        return view('livewire.case-converter');
     }
 }
